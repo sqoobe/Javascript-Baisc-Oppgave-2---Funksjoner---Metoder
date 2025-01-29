@@ -22,6 +22,16 @@ funksjonen)
 ******************************************************************************/
 
 // Skriv koden for oppgave 1 her
+function oddOrNot(tall) {
+  return tall % 2 === 0 ? "Partall" : "Oddetall";
+}
+// tall % 2 === 0 sjekker om det kan deles på 2 som blir partall
+// tall % 2 !== 0 betyr at det blir oddetall
+//
+console.log(oddOrNot(4)); //par
+console.log(oddOrNot(11)); //odd
+console.log(oddOrNot(6)); //par
+console.log(oddOrNot(7)); //odd
 
 /******************************************************************************
 2.
@@ -36,7 +46,15 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 ******************************************************************************/
 
 // Skriv koden for oppgave 2 her
+let myText = "Dette er kult"; // variabel med string text "Dette er kult"
+let myText2 = "Dette er enda kulere";
 
+function thisIs(text) {
+  return text.toUpperCase() + "!"; //gjør parameter til uppercast & legger til "!"
+}
+
+console.log(thisIs(myText2));
+//
 /******************************************************************************
 3.
 
