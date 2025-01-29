@@ -53,7 +53,7 @@ function thisIs(text) {
   return text.toUpperCase() + "!"; //gjør parameter til uppercast & legger til "!"
 }
 
-console.log(thisIs(myText2));
+console.log(thisIs(myText2 + " " + "og mega tøft"));
 //
 /******************************************************************************
 3.
@@ -78,6 +78,23 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 ******************************************************************************/
 
 // Skriv koden for oppgave 3 her
+let mittNavn = "Jacob";
+let klokkenEr = 10;
+
+function greeting(navn, tid) {
+  if (klokkenEr < 0 || klokkenEr > 23) {
+    return "Ugyldig tid";
+  } else if (klokkenEr >= 0 && klokkenEr <= 5) {
+    return `God natt ${mittNavn}`;
+  } else if (klokkenEr >= 6 && klokkenEr <= 11) {
+    return `God morgen ${mittNavn}`;
+  } else if (klokkenEr >= 12 && klokkenEr <= 17) {
+    return `God dag ${mittNavn}`;
+  } else {
+    return `God kveld ${mittNavn}`;
+  }
+}
+console.log(greeting());
 
 /******************************************************************************
 4.
@@ -95,7 +112,19 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 ******************************************************************************/
 
 // Skriv koden for oppgave 4 her
+const farger = ["Rød", "Grønn", "Blå", "Gul"];
 
+const mineTall = ["En", "To", "Tre", "Fire", "Fem", "Seks"];
+
+function firstAndLast(array) {
+  array.pop() & array.shift();
+  return array;
+}
+//
+console.log(firstAndLast(farger)); //returnerer farger med først og siste index fjernet.
+//
+console.log(firstAndLast(mineTall)); //returnerer tall med først og siste index fjernet.
+//
 /******************************************************************************
 5.
 
@@ -116,6 +145,17 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 ******************************************************************************/
 
 // Skriv koden for oppgave 5 her
+
+let eksempel1 = "  Javascript er vanskelig   ";
+let eksempel2 = " Det er vanskelig å bruke metoder ";
+let eksempel3 = "   vanskelig        ";
+
+function ryddOpp(string) {
+  string.replace("vanskelig", "gøy") & string.trim();
+
+  return string;
+}
+console.log(ryddOpp(eksempel1));
 
 /******************************************************************************
 6.
