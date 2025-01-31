@@ -150,12 +150,14 @@ let eksempel1 = "  Javascript er vanskelig   ";
 let eksempel2 = " Det er vanskelig å bruke metoder ";
 let eksempel3 = "   vanskelig        ";
 
-function ryddOpp(string) {
-  string.replace("vanskelig", "gøy") & string.trim();
-
-  return string;
+function ryddOpp(text) {
+  let newText = text.replace("vanskelig", "gøy");
+  newText = newText.trim();
+  return newText;
 }
 console.log(ryddOpp(eksempel1));
+console.log(ryddOpp(eksempel2));
+console.log(ryddOpp(eksempel3));
 
 /******************************************************************************
 6.
@@ -181,6 +183,21 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 ******************************************************************************/
 
 // Skriv koden for oppgave 6 her
+
+//Steg 1:
+items.shift(); //fjerner første element i array
+console.log(items);
+//Steg 2:
+items[2] = "Linjal"; //funker bare vis du vet hvor viskelær ligger i arrayen.
+//penn=0,notatbok=1,viskelær=2.
+console.log(items);
+//Steg 3:
+items.splice(0, 2, "Markerkingspenn"); //starter slette elementer på 0, til element#2 og legger til Markeringspenn.
+console.log(items);
+//Steg 4:
+let stepFour = items.join(" | "); //Setter sammen alle elementene til en string og legger til " | " som seperator.
+console.log(stepFour);
+//
 
 /******************************************************************************
 7.
