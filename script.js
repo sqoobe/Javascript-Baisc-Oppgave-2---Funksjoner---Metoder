@@ -192,7 +192,7 @@ items[2] = "Linjal"; //funker bare vis du vet hvor viskelær ligger i arrayen.
 //penn=0,notatbok=1,viskelær=2.
 console.log(items);
 //Steg 3:
-items.splice(0, 2, "Markerkingspenn"); //starter slette elementer på 0, til element#2 og legger til Markeringspenn.
+items.splice(0, 2, "Markerkingspenn"); //starter på element#0, sletter 2 elementer og legger til Markeringspenn.
 console.log(items);
 //Steg 4:
 let stepFour = items.join(" | "); //Setter sammen alle elementene til en string og legger til " | " som seperator.
